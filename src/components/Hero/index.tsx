@@ -11,13 +11,25 @@ type heroPr = {
 }
 
 const Hero: React.FC<heroPr> = ({ title, subtitle, btn, btnTxt, bcgrImg }) => {
-  console.log(bcgrImg);
+
+  const scrollWithOffset = (el: HTMLElement, offset: number) => {
+    const elementPosition = el.offsetTop - offset;
+    window.scroll({
+      top: elementPosition,
+      left: 0,
+      behavior: 'smooth',
+    });
+  };  
 
   return (
     <HeroSection bcgrImg={bcgrImg}>
       <HeroTitle>{title}</HeroTitle>
       <HeroSubtitle>{subtitle}</HeroSubtitle>
-      {btn && <MainBtn to={''}>{btnTxt}</MainBtn>}
+      {btn && (
+        <MainBtn to='/getstarted#plans' scroll={(el) => scrollWithOffset(el, 185)}>
+          {btnTxt}
+        </MainBtn>
+      )}
     </HeroSection>
   );
 };

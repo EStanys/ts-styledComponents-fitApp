@@ -30,7 +30,7 @@ const PlanCard: React.FC<planCard> = ({ name, limit, programs, options, cost, pa
   const history = useHistory();
 
   const onClickHandler = () => {
-    options.length === 0 ? history.push(`/plan/${planId}`) : history.push(`/planoptions/${planId}`);
+    options.length === 0 ? history.push(`/plan/${planId}`) : history.push(`/plan/options/${planId}`);
   };
 
   return (

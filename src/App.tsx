@@ -6,6 +6,7 @@ import Footer from './components/Footer/index';
 import Home from './pages/Home';
 import GetStarted from './pages/GetStarted';
 import PlanSummaryPage from './pages/PlanSummaryPage';
+import PlanOptionsPage from './pages/PlanOptionsPage';
 
 const App: React.FC = () => (
   <>
@@ -17,6 +18,7 @@ const App: React.FC = () => (
         <Route path='/getstarted' component={GetStarted} />
         <Route path='/plan/:id/:monthly' component={PlanSummaryPage} />
         <Route path='/plan/:id' component={PlanSummaryPage} />
+        <Route path='/plan/options/:id' component={PlanOptionsPage} />
       </Switch>
     </div>
     <Footer />
