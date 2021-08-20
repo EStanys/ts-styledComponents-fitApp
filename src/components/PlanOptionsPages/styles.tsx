@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const POptionsWrapper = styled.div`
   height: 100%;
   width: 100%;
+  margin-top: 110px;
   background-color: black;
 `;
 

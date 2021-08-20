@@ -15,7 +15,6 @@ export const GSContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  
 `;
 export const GSTitle = styled.h2`
   color: white;

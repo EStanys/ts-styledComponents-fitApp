@@ -16,9 +16,10 @@ const App: React.FC = () => (
       <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/getstarted' component={GetStarted} />
-        <Route path='/plan/:id/:monthly' component={PlanSummaryPage} />
-        <Route path='/plan/:id' component={PlanSummaryPage} />
         <Route path='/plan/options/:id' component={PlanOptionsPage} />
+        <Route path='/plan/:id/:monthly' component={PlanSummaryPage} />
+        <Route path='/plan/:id' exact component={PlanSummaryPage} />
+        {/* not found page */}
       </Switch>
     </div>
     <Footer />

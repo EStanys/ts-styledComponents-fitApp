@@ -5,10 +5,11 @@ import PlanOptions from '../components/PlanOptionsPages/index';
 
 const PlanOptionsPage: React.FC = () => {
 
-  const {id: planId} = useParams<{id: string}>()
+  const {id: planOptionsId} = useParams<{id: string}>()
+  
   return (
     <MainContainer>
-      <PlanOptions planId={planId} />
+      <PlanOptions planOptionsId={planOptionsId} />
     </MainContainer>
   );
 };

@@ -39,7 +39,7 @@ type planCard = {
 
 const PlanSummary: React.FC<{ planId: string; monthly: boolean }> = ({ planId, monthly }) => {
   const [value, onChange] = useState(new Date());
-
+  
   const currentPlan: planCard = plans.filter((plan) => plan.planId === +planId);
 
   const { name, programs, commitment, cost, options } = currentPlan[0];
