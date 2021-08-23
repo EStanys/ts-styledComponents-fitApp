@@ -103,20 +103,21 @@ const PlanSummary: React.FC<{ planId: string; monthly: boolean }> = ({ planId, m
           </SummaryRow>
           <br />
           <SummaryRow>
-            <strong>Commitment Cost:</strong> <p>€{commitmenCost}</p>
+            <strong>Commitment Cost:</strong> <p>€{typeof commitmenCost === 'number' && commitmenCost.toFixed(2)}</p>
           </SummaryRow>
           <SummaryRow>
             <strong>Commitment Tax:</strong> <p>€0.00</p>
           </SummaryRow>
           <SummaryRow>
-            <strong>Commitment Total:</strong> <p>€{commitmenTotal}</p>
+            <strong>Commitment Total:</strong> <p>€{typeof commitmenTotal === 'number' && commitmenTotal.toFixed(2)}</p>
           </SummaryRow>
           <SummaryRow>
             <strong>Billed on:</strong> <p>{billedOn}</p>
           </SummaryRow>
           <br />
           <SummaryRow>
-            <strong>Initial Payment (Due Now):</strong> <strong>€{commitmenCost}</strong>
+            <strong>Initial Payment (Due Now):</strong>{' '}
+            <strong>€{typeof commitmenCost === 'number' && commitmenCost.toFixed(2)}</strong>
           </SummaryRow>
         </SummaryContainer>
 
